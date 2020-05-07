@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <title id="title">Photo Album</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="images/favicon.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(202, 192, 192);
+            color: darkgoldenrod;
+            text-align: center;
+        }
+        
+        body {
+            padding-top: 70px;
+            padding-bottom: 30px;
+            background-color: cadetblue;
+        }
+        
+        .txt:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            border: 1px solid #888;
+            padding-top: 2%;
+            padding-left: 2%;
+            padding-bottom: 2%;
+            width: 80%;
+        }
+        
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+        
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+        
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+        
+        @media screen and (max-width: 650px) {
+            .modal-content {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body id="body">
+    <nav class="navbar navbar-fixed-top navbar-default">
+        <div class="container-fluid" id="header">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                </button>
+                <a class="navbar-brand" href="/" id="nav-logo">Photo Album</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id='edit_photo' class="txt" style="display: none"><a>Edit Details</a></li>
+                    <li id='delete_photo'></li>
+                    <li><a href="/" id='huser' style="display: none"> My Profile</a></li>
+                    <li><a href="/"> Home</a></li>
+                    <li><a href="/logout" id="logout"> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="col-md-12 container-fluid">
+        <div id='msg'></div>
+        <div id="content"></div>
+    </div>
+    <div id="id01" class="modal">
+        <div class="container_ modal-content">
+            name : <input type="text" placeholder="name" name="mname" id="m_name" required><br> description : <input style="width: 80%" type="" placeholder="description" name="mdescription" id="m_description" required><br> privacy :
+            <select id='m_privacy'>
+                        <option value="private">private</option>
+                        <option value="only-url">view with url</option>
+                        <option value="public">public</option>
+                      </select>
+            <div id='msg_1'></div>
+            <input type="button" class="button" id='fsubmit' value="Update"></button>
+            <div id='msg_1'></div>
+        </div>
+    </div>
+
+</body>
+<script src="../../js/photo.js"></script>
+
+</html>

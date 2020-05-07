@@ -1,0 +1,42 @@
+{
+  "name": "photo_gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "1.15.0",
+    "connect-busboy": "0.0.2",
+    "connect-form": "^0.2.1",
+    "cors": "2.7.1",
+    "errorhandler": "1.4.3",
+    "express": "4.13.4",
+    "express-fileupload": "^0.4.0",
+    "express-jwt": "3.3.0",
+    "express-session": "1.13.0",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.2.1",
+    "method-override": "2.3.5",
+    "methods": "1.1.2",
+    "mongoose": "^5.1.0",
+    "mongoose-unique-validator": "1.0.2",
+    "morgan": "1.7.0",
+    "node-thumbnail": "^0.14.0",
+    "nodemon": "^1.11.0",
+    "passport": "0.3.2",
+    "passport-local": "1.0.0",
+    "qs": "^6.5.2",
+    "request": "2.69.0",
+    "slug": "0.9.1",
+    "underscore": "1.8.3",
+    "path": "^0.12.7",
+    "uuid": "^3.2.1"
+  },
+  "engines": {
+    "node": "12.6.0"
+  }
+}

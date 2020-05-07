@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <title id="title">Photo Album</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="images/favicon.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(202, 192, 192);
+            color: darkgoldenrod;
+            text-align: center;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 70px;
+            background-color: cadetblue;
+        }
+        
+        .con {
+            width: 80%;
+            margin: 2% 2% 2% 9%;
+            background-color: #f2e8e8;
+            border-radius: 8px;
+        }
+        
+        @media screen and (max-width: 650px) {
+            .con {
+                width: 100%;
+                margin: 0% 0% auto 1%;
+                padding-left: 2%;
+            }
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            border: 1px solid #888;
+            padding-top: 2%;
+            padding-left: 2%;
+            padding-bottom: 2%;
+            width: 80%;
+        }
+        
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+        
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+        
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+        
+        @media screen and (max-width: 650px) {
+            .modal-content {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body id="body">
+    <nav class="navbar navbar-fixed-top navbar-default">
+        <div class="container-fluid" id="header">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                </button>
+                <a class="navbar-brand" href="/" id="nav-logo">Photo Album</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/" id='huser' style="display: none">Profile</a></li>
+                    <li><a href="/"> Home</a></li>
+                    <li>
+                        <a href="/logout"> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="con">
+        <p>
+            <div style="padding-bottom: 1%;padding-top: 1%;padding-left: 2%;font-size:20px;margin-bottom: 1%" id="username"> </div>
+            <div style="padding-bottom: 1%;padding-left: 2%;font-size:20px;margin-bottom: 1%" id='email'> </div>
+            <div style="padding-bottom: 1%;padding-left: 2%;font-size:20px;margin-bottom: 1%" id='firstname'> </div>
+            <div style="padding-bottom: 1%;padding-left: 2%;font-size:20px;margin-bottom: 1%" id='lastname'> </div>
+            <div style="padding-bottom: 1%;padding-left: 2%;font-size:20px;margin-bottom: 1%" id='gender'> </div>
+        </p>
+
+    </div>
+
+</body>
+<script src="../js/profile.js"></script>
+
+</html>

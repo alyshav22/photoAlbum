@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Photo Album - Register</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: cadetblue;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        /* Add padding to containers */
+        
+        .container {
+            padding: 0px;
+            background-color: white;
+            width: 50%;
+            padding: 0 50px;
+        }
+        /* Full-width input fields */
+        
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0 15px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+        
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        /* Overwrite default styles of hr */
+        
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 10px;
+        }
+        /* Set a style for the submit button */
+        
+        .registerbtn {
+            background-color: orange;
+            color: white;
+            padding: 16px 16px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        /* Add a blue text color to links */
+        
+        a {
+            color: dodgerblue;
+        }
+        /* Set a grey background color and center the text of the "sign in" section */
+        
+        .signin {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+        
+        @media screen and (max-width: 650px) {
+            .container {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span> 
+                    </button>
+                <a class="navbar-brand" id='nav-logo' href="/">Photo Album</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id='nav-signin' href="/login"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h3>Register</h3>
+        <div id='msg'></div>
+        <hr>
+        <label for="email"><b>First Name</b></label>
+        <input type="text" placeholder="Enter First Name" id="firstname" data-bind="value:firstname" required>
+        <label for="email"><b>Last Name</b></label>
+        <input type="text" placeholder="Enter last Name" id="lastname" data-bind="value:lastname" required>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" id="email" data-bind="value:email" required>
+        <label for="email"><b>Username</b></label>
+        <input type="text" placeholder="Username" id="username" data-bind="value:username" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="password" data-bind="value:password" required>
+        <label for="psw"><b>Gender</b></label>
+        <select id="gender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select>
+        <input type="button" id='register-button' value="Register" class="registerbtn"></button>
+    </div>
+
+    <div class="container signin">
+        <p>Already have an account? <a id='signin' href="/login">Sign in</a>.</p>
+    </div>
+
+</body>
+<script src="js/register.js"></script>
+
+</html>
